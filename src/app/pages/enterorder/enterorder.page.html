@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goPrevious()" color="primary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+
+<ion-content>
+  <ion-tabs >
+
+    <ion-tab-bar slot="bottom" >
+      <ion-tab-button tab="orders" style="border-right: 1px solid cornflowerblue;">
+        
+        <ion-label style="color: cornflowerblue; font-weight: bold;">Enter Order</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="camera">
+        
+        <ion-label style="color: cornflowerblue; font-weight: bold;">Take Photo</ion-label>
+      </ion-tab-button>
+  
+      
+    </ion-tab-bar>
+  
+  </ion-tabs>
+</ion-content>

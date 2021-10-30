@@ -1,0 +1,12 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content >
+  <ion-item style="margin-top: 40px; border: solid 1px #545ca7;">
+    <ion-textarea [(ngModel)]="ordersdata" [ngModelOptions]="{standalone: true}" rows="7" cols="18" placeholder="Enter Products here..."></ion-textarea>
+
+    
+  </ion-item>
+  <ion-button expand="block" (click)="placeOrder()" color="primary" style="margin-left:8%; margin-right:8%; margin-top:13px; ">Place Order</ion-button>
+</ion-content>

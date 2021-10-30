@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Order List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngFor="let ord of this.ordersdata">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Status : {{ord.Status}}</ion-card-subtitle>
+        <ion-card-title style="font-size: 20px;">{{ord.Location}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+          <ion-col size="4">
+            
+              <ion-thumbnail>
+                <img src="{{ord.OrderImage}}">
+              </ion-thumbnail>
+            
+          </ion-col>
+          <ion-col size="8">
+           
+              {{ord.Ordertext}}
+            
+          </ion-col>
+        </ion-row>
+        </ion-grid>
+
+
+        
+        
+      </ion-card-content>
+    </ion-card>
+    
+
+  </ion-list>
+
+</ion-content>

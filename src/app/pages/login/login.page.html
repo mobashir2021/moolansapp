@@ -1,0 +1,31 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+    <ion-buttons slot="end">
+      <ion-button routerLink="/signup">Sign up</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <!-- <h1 style="color:#EB445A;" >Login</h1> -->
+    <app-logotext></app-logotext>
+  </div>
+  
+
+  <form id="form" style="margin-top: 98px;">
+    <ion-item class="ion-margin-bottom">
+      <ion-input [(ngModel)]="userphone" [ngModelOptions]="{standalone: true}" type="text" placeholder="Enter Mobileno"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-bottom">
+      <ion-input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" placeholder="Enter Password"></ion-input>
+    </ion-item>
+
+    <ion-button class="btnbottom" expand="block" color="danger" (click)="loginclick()">Login</ion-button>
+  </form>
+</ion-content>

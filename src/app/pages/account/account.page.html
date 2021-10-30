@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="light">
+    <ion-title  >Family Mart</ion-title>
+    <ion-icon color="danger" (click)="presentPopover($event)" name="person-circle" slot="end"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <div class="banner" style="position:relative;">
+    <img src="../../../assets/images/maloonlogo.png" />
+  </div>
+
+  <ion-select [(ngModel)] = "this.selectedlocation" [ngModelOptions]="{standalone: true}" placeholder="Select Location">
+    <ion-select-option *ngFor="let loc of this.locations">
+      {{loc.Location1}}
+    </ion-select-option>
+  </ion-select>
+
+  <!-- <ion-select [(ngModel)] = "this.selectedlocation" placeholder="Select Location">
+    <ion-select-option>AngaMaly</ion-select-option>
+    <ion-select-option>Bangalore</ion-select-option>
+    <ion-select-option>Hyderabad</ion-select-option>
+    <ion-select-option>Mumbai</ion-select-option>
+  </ion-select> -->
+
+  <!-- <ion-searchbar style="margin-left:8%; margin-right:8%; margin-top:45px; width:86%;  "
+  placeholder="Enter Location" no-padding
+  (ionInput)="FilterLocation($event)"
+  >
+</ion-searchbar> -->
+  <ion-button expand="block" (click)="gotoNewOrder()" color="primary" style="margin-left:8%; margin-right:8%; margin-top:13px; ">Book Order</ion-button>
+
+</ion-content>
